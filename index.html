@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Movie DB</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-12">
+        <div class="portfolioFilter clearfix">
+          <a href="#" data-filter="*" class="current">All Categories</a>
+          <a href="#" data-filter=".Movies">Popular Movies</a>
+          <a href="#" data-filter=".Shows">Popular TV Shows</a>
+          <a href="#" data-filter=".Persons">Popular Persons</a>			  
+          <input type="text" id="searchText" style="display:none;" placeholder="Search...">
+          <div id="searchedItem"></div>				  
+        </div>
+      </div>
+
+      <div class="portfolioContainer" id="portfolioContainer"></div>
+
+      <!--------- Modal part begins here ------------->
+
+      <!--------- Movie Modal part begins here --------->
+      <div class="modal" id="popular-movies-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Movie Details</h4>
+              </div>
+              <div class="modal-body">
+                <div class="col-md-12">
+                  <label class="col-md-4">Title</label>
+                  <label class="col-md-8" name="title"></label>  
+                </div> 
+                <div class="col-md-12">
+                  <label class="col-md-4">Release Date</label>
+                  <label class="col-md-8" name="release"></label>  
+                </div>
+                <div class="col-md-12">
+                  <label class="col-md-4">Overview</label>
+                  <label class="col-md-8" name="overview"></label>  
+                </div> 
+                <div class="col-md-12">
+                  <label class="col-md-4">Genres</label>
+                  <label class="col-md-8" name="genres"></label>  
+                </div>                            
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--------- TV Shows Modal part begins here --------->
+        <div class="modal" id="popular-tv-modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                  <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">TV Shows Details</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="col-md-12">
+                    <label class="col-md-4">Name</label>
+                    <label class="col-md-8" name="name"></label>  
+                  </div> 
+                  <div class="col-md-12">
+                    <label class="col-md-4">First Show</label>
+                    <label class="col-md-8" name="firstairdate"></label>  
+                  </div>
+                  <div class="col-md-12">
+                    <label class="col-md-4">Last Show</label>
+                    <label class="col-md-8" name="lastairdate"></label>  
+                  </div> 
+                  <div class="col-md-12">
+                    <label class="col-md-4">Status</label>
+                    <label class="col-md-8" name="status"></label>  
+                  </div>                            
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--------- Popular Persons Modal part begins here --------->
+          <div class="modal" id="popular-person-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Person Details</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="col-md-12">
+                      <label class="col-md-4">Name</label>
+                      <label class="col-md-8" name="name"></label>  
+                    </div> 
+                    <div class="col-md-12">
+                      <label class="col-md-4">Biography</label>
+                      <label class="col-md-8" name="biography"></label>  
+                    </div>
+                    <div class="col-md-12">
+                      <label class="col-md-4">Place of Birth</label>
+                      <label class="col-md-8" name="placeofbirth"></label>  
+                    </div> 
+                    <div class="col-md-12">
+                      <label class="col-md-4">Department</label>
+                      <label class="col-md-8" name="knownfordepartment"></label>  
+                    </div>                            
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--------- Modal part ends here --------->
+          </div>
+        </div>
+
+        <!-- partial -->
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+        <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src='https://isotope.metafizzy.co/v1/jquery.isotope.min.js'></script>
+        <script  src="./script.js"></script>
+
+      </body>
+      </html>
